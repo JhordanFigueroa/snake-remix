@@ -1,0 +1,10 @@
+Bug: Snake game is not moving when I specify the gamebox positions and collision with its tail. 
+
+Desire behavior: 
+Is snake moves within the gambebox smoothly. 
+
+Three Links to Resources You Used to Try and Fix the Bug 1. 2. 3.
+
+https://codepen.io/pen/?&editable=true
+https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+https://codepen.io/pen/?&editable=true
