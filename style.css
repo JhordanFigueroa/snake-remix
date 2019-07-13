@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    margin: 1em;
+    text-align: center;
+  }
+
+  .gameboard {
+    width: 600px;
+    height: 600px;
+    background-color: rgb(223, 205, 255);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .snake {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* background-image: url(https://www.scirra.com/arcade/images/8296/450/little-green-block.jpg); */
+    background: orange;
+    transition: 100ms;
+  }
+
+  /* .froggy {
+
+  }
+
+  .score {
+
+  } */
