@@ -26,10 +26,9 @@
     transition: 100ms;
   }
 
-  /* .froggy {
-
+  .frog {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: blue;
   }
-
-  .score {
-
-  } */

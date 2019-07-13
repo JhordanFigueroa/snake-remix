@@ -1,16 +1,17 @@
 /* eslint-disable */
+console.log("Aloha World!");
+
 const unit = 30;
 
-let snake = [];
-
+let snake = [{x: 0, y: 0}];
 //snake head
-snake[0] = {x:0,y:0};
+// snake[0] = {x:10*unit, y:10*unit};
 
-//old snake head position
-let snakeHeadX = snake[0].x;
-let snakeHeadY = snake[0].y;
-
+//snake head position
+// let snakeX = snake[0].x;
+// let snakeY = snake[0].y;
 //create score
+
 let score = 0;
 
 //got this function from here: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
@@ -64,7 +65,7 @@ const isThereAFrogAt = function(x,y) {
 const removeFrogAt = function(x,y) {
     for(let i = 0; i < frogs.length; i++) {
         const frog = frogs[i];
-        if(frog.x === snake[0].x && frog.y === snake[0].y) {
+        if(frog.x === x && frog.y === y) {
             console.log('remove frog')
             frogs.splice(i, 1);
             frogs = [{ x: getRandomArbitrary(0,19), y: getRandomArbitrary(0,19) }]
@@ -75,14 +76,11 @@ const removeFrogAt = function(x,y) {
             frogEl.style.left = (frog.x * unit).toString() + 'px';
             frogEl.style.top = (frog.y * unit).toString() + 'px';
             document.querySelector('.gameboard').appendChild(frogEl);
-            // snake.pop();
-            // let newSnakeHead = {
-            //     x: snakeHeadX, 
-            //     y: snakeHeadY
-            // };
         };
     };
+    // return frogs;
 };
+
 
 // Check if player can make move
 // const canMoveTo = function(x,y) {
@@ -96,6 +94,19 @@ const removeFrogAt = function(x,y) {
 //     };
 //     return true;
 // };
+
+// // SNAKE EATS FROG
+// function snakeEatFrog () {
+//     if(snake.x == frogs.x && snake.y == frogs.y) {
+//         frogs = {
+//             x: getRandomArbitrary(0,19) * unit + 'px', 
+//             y: getRandomArbitrary(0,19) * unit + 'px'
+//         };
+//     } else {
+
+//     }
+// };
+// snakeEatFrog();
 
 //SNAKE STAYS WITHIN COORDINATE 
 const isCoordinateInGrid = function(x, y) {
@@ -115,6 +126,12 @@ function moveSnake(x,y) {
         console.log('snake ate frog!');
     };
 };
+
+//GAME OVER
+
+// function gameOver () {
+//     if (snake.x < 0 || snake.x > 19)
+// }
 
 function moveUp () {
     console.log('move up');
