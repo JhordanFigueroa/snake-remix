@@ -1,34 +1,82 @@
-* {
+body {
+    background-image: url(https://www.telegraph.co.uk/content/dam/Travel/2018/September/El-Yunque-morning-mist-iStock-535499464.jpg?imwidth=450);
+    background-size: cover;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
   }
-  
-  .title {
-    margin: 1em;
+.title {
+    margin: 0;
+    font-size: 3em;
+    box-sizing: border-box;
+    background-color: #053B06;
+    color: white;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+  }
+  .container {
+      padding: 0;
+      display: flex;
+      border: 5px solid #ffcc5c;
+      /* flex-direction: column; */
+  }
+
+  @media all and (max-width: 750px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  }
+  @media all and (max-width: 400px) {
+    .container > li {
+      flex: 1 1 100%;
+    }
+  }
+  .container > li {
+    padding: 5px;
     text-align: center;
+    font-size: 1em;
+    box-sizing: border-box;
+    list-style-type: none;
+    flex: 1;
+    color: white;
+  }
+  .home {
+      background-color: #708B75;
+  }
+  .refresh {
+      background-color: #9AB87A;
+  }
+  .winner {
+      background-color: #88D498;
   }
 
   .gameboard {
     width: 600px;
     height: 600px;
-    background-color: rgb(223, 205, 255);
+    background-color: black;
     margin: 0 auto;
     position: relative;
+    display: flex;
   }
-
   .snake {
     width: 30px;
     height: 30px;
     position: absolute;
     /* background-image: url(https://www.scirra.com/arcade/images/8296/450/little-green-block.jpg); */
-    background: orange;
+    background: white;;
     transition: 100ms;
   }
-
   .frog {
     width: 30px;
     height: 30px;
     position: absolute;
-    background: blue;
+    background: green;;
+  }
+  footer {
+      position: relative;
+      background-color: #C6DABF;
+      color: white;
+      padding: 5px;
   }
