@@ -7,6 +7,15 @@ let snake = [{ x: 0, y: 0 }];
 const animateTitle = document.querySelector('.title');
 animateTitle.classList.add('animated','jackInTheBox');
 
+const animateRefresh = document.querySelector('.refresh');
+animateRefresh.classList.add('animated', 'bounce')
+
+const animateHome = document.querySelector('.home');
+animateHome.classList.add('animated', 'flash')
+
+const animateWinner = document.querySelector('.winner');
+animateWinner.classList.add('animated', 'rubberBand')
+
 //snake head
 // snake[0] = ;
 
