@@ -1,0 +1,58 @@
+//Javascript
+// Test files linked 
+console.log('Aloha');
+// Draw Game Box
+
+const buildBox = document.getElementById('gamebox');
+const snakeBox = buildBox.getContext('2d');
+
+// Define the snake unit dimension 
+
+const boxUnit = 10;
+
+// Upload Frog image 
+// const froggy = new Image();
+// froggy.src = "https://www.clipartmax.com/png/small/277-2774270_frog-splat-icon-frog-png-icon.png"
+
+// Create Snake 
+const snake = [];
+
+//Create snake initial position
+snake[0] = {x: 14*boxUnit, y: 7*boxUnit};
+
+//Box count: 29 across/14 down. Middle x 14/y7
+//Create Scores count
+
+let score = 0;
+let time = 0;
+let tail = 0;
+let speed = 0;
+
+// Control the Snake
+
+let remote;
+document.addEventListener('keydown',control);
+
+function control (evt) {
+    
+}
+
+//Draw the images for the game: snake, frog, time count, length count, speed count, food eaten
+
+function drawGame () {
+  for( let i = 0; i < snake.length ; i++){
+      snakeBox.fillRect(snake[i].x,snake[i].y,boxUnit,boxUnit);
+  };
+};
+drawGame();
+
+//css
+canvas {
+    width: 800px;
+    height: 600px;
+    background-color: gray;
+    display: block;
+    border: 2px black;
+    margin: 0 auto;
+    position: relative;
+}
