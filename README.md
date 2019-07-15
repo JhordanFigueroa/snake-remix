@@ -31,7 +31,7 @@ A notification will display that the player can move to the next level when thes
 The player can keep playing to get the highest record for the level up too a maximum of three minutes. 
 
 
-# Level 2 Suave-Loco
+<!-- # Level 2 Suave-Loco
 This level is intermediate. The initial parameters are: 
 Initial Speed: 5
 Initial Length: 5
@@ -65,7 +65,7 @@ Minimum Time: 90 seconds
 Snake Length: > 10
 Snake Speed: > 10
 
-The player can keep playing to get the highest record for the level up too a maximum of three minutes.
+The player can keep playing to get the highest record for the level up too a maximum of three minutes. -->
 
 # Game Decision:
 The game decision screen will appear after each level. 
