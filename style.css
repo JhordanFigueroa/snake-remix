@@ -44,9 +44,13 @@ body {
   }
   .home {
       background-color: #708B75;
+      animation-duration: 2s;
+      animation-iteration-count: initial;
   }
   .refresh {
       background-color: #9AB87A;
+      animation-duration: 2s;
+      animation-iteration-count: initial;
   }
   .winner {
       background-color: #88D498;
@@ -79,4 +83,16 @@ body {
       background-color: #C6DABF;
       color: white;
       padding: 5px;
+  }
+
+  .homescreen {
+      width: 500px;
+      height: 500px;
+      background-color: lightblue;
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+  }
+  .start {
+    background-color: #0B5D1E;
   }
