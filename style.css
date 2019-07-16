@@ -96,7 +96,7 @@ body {
   .gameboard {
     width: 600px;
     height: 420px;
-    background-color: black;
+    background-color: #0EAD69;
     margin: 0 auto;
     position: relative;
     display: flex;
