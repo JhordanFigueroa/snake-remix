@@ -32,3 +32,6 @@ Up Key: moves snake up
 Down Key: moves snake down
 Left Key: moves snake left
 Right Key: moves snake right
+
+# Link to Game
+https://jhordanfigueroa.github.io/snake-remix/.
