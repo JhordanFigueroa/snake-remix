@@ -3,9 +3,8 @@ const unit = 30;
 const gameBoard = document.querySelector('.gameboard');
 let snakeDivs = document.getElementsByClassName('snake');
 let snake = [{ x: 0, y: 0 }];
-const snakeBody = document.querySelector('.snake');
 
-const animateTitle = document.querySelector('.level1-title');
+const animateTitle = document.querySelector('.level3-title');
 animateTitle.classList.add('animated','jackInTheBox');
 
 const animateRefresh = document.querySelector('.refresh');
@@ -15,15 +14,13 @@ const animateHome = document.querySelector('.home');
 animateHome.classList.add('animated', 'flash');
 
 document.getElementsByClassName('refresh')[0].addEventListener("click", function(){ window.location.reload()});
-
 //create score
 let score = 0;
+let highScores = [];
 document.getElementById('score').innerHTML = "Score: " + score;
-
 //Timer
-let level1Clock = 30;
+let level1Clock = 60;
 const displayClock = document.getElementById('clock');
-
 setInterval(function() {
     if (level1Clock == -1) {
         clearTimeout(level1Clock);
@@ -33,7 +30,6 @@ setInterval(function() {
         level1Clock--;
     };
 }, 1000);
-
 function gameover() {
     let display = confirm('YOU RAN OUT OF TIME! CHECK YOUR SCORE! PRESS OK TO PLAY AGAIN OR CANCEL FOR FUNNY THINGS.')
     if (display == true) {
@@ -46,10 +42,8 @@ function gameover() {
 function getRandomArbitrary(min, max) {
 	return Math.floor(Math.random() * (max - min) + min);
 };
-
 //create froggy
 let frogs = [{ x: getRandomArbitrary(0, 19), y: getRandomArbitrary(0, 13) }];
-
 const renderFrog = function() {
 	const frogElements = document.querySelectorAll('.frog');
 	for (let i = 0; i < frogElements.length; i++) {
@@ -70,38 +64,27 @@ const isThereAFrogAt = function(x, y) {
 		const frog = frogs[i];
 		if (frog.x === snake[0].x && frog.y === snake[0].y) {
 			return true;
-		}
-	}
+		};
+	};
 	return false;
 };
-function renderAddTail () {
-    const snakeTail = document.createElement('div');
-    snakeTail.classList.add('snake-tail');
-    let tailLocation = {
-        x: snake[0].x -1,
-        y: snake[0].y -1
-    };
-    snake.push(tailLocation);
-    for(element in snake) {
-        snakeBody.appendChild(snakeTail);
-    };
-};
+//Local Storage
 function highScore(score) {
-    if(!localStorage.getItem('#highscores1')) {
-        localStorage.setItem('#highscores1', score);
-        const highestScore = parseInt(localStorage.getItem('#highscores1'));
-        document.querySelector('#bestscore1').innerHTML = `New Highest Record: ${highestScore}`;
-    } else if (parseInt(score) > parseInt(localStorage.getItem('#highscores1'))) {
-        localStorage.setItem('#highscores1', score);
-        const highestScore = parseInt(localStorage.getItem('#highscores1'));
-        document.querySelector('#bestscore1').innerHTML = `New Highest Record: ${highestScore}`;
+    if(!localStorage.getItem('#highscores3')) {
+        localStorage.setItem('#highscores3', score);
+        const highestScore = parseInt(localStorage.getItem('#highscores3'));
+        document.querySelector('#bestscore3').innerHTML = `New Highest Record: ${highestScore}`;
+    } else if (parseInt(score) > parseInt(localStorage.getItem('#highscores3'))) {
+        localStorage.setItem('#highscores3', score);
+        const highestScore = parseInt(localStorage.getItem('#highscores3'));
+        document.querySelector('#bestscore3').innerHTML = `New Highest Record: ${highestScore}`;
     } else {
-        const highestScore = parseInt(localStorage.getItem('#highscores1'));
-        document.querySelector('#bestscore1').innerHTML = `Highest Record: ${highestScore}`;
+        const highestScore = parseInt(localStorage.getItem('#highscores3'));
+        document.querySelector('#bestscore3').innerHTML = `Highest Record: ${highestScore}`;
     };
 };
-const highestScore = parseInt(localStorage.getItem('#highscores1'));
-document.querySelector('#bestscore1').innerHTML = `Highest Record: ${highestScore}`;
+const highestScore = parseInt(localStorage.getItem('#highscores3'));
+document.querySelector('#bestscore3').innerHTML = `Highest Record: ${highestScore}`;
 
 const removeFrogAt = function(x, y) {
 	for (let i = 0; i < frogs.length; i++) {
@@ -110,9 +93,7 @@ const removeFrogAt = function(x, y) {
             score++;
             highScore(score);
             document.getElementById('score').innerHTML = "Score: " + score;
-			console.log(snake);
-            frogs.splice(i, 1);
-            renderAddTail();
+			frogs.splice(i, 1);
 			frogs = [{ x: getRandomArbitrary(0, 19), y: getRandomArbitrary(0, 13) }];
 			const frog = frogs[0];
 			const frogEl = document.createElement('div');
@@ -136,14 +117,13 @@ const isCoordinateInGrid = function(x, y) {
 	};
 	return true;
 };
-//Store Scores in LocalStorage
 function moveSnake(x, y) {
 	const snakeElement = document.querySelector('.snake');
 	snakeElement.style.left = (snake[0].x * unit).toString() + 'px';
 	snakeElement.style.top = (snake[0].y * unit).toString() + 'px';
 	if (isThereAFrogAt(x, y)) {
 		removeFrogAt(x, y);
-        renderFrog();
+		renderFrog();
 	};
 };
 function moveUp() {

@@ -3,7 +3,7 @@ body {
     background-size: cover;
     margin: 0;
   }
-.title {
+.home-title {
     margin: 0;
     font-size: 3em;
     box-sizing: border-box;
@@ -16,13 +16,51 @@ body {
     animation-duration: 2s;
     animation-iteration-count: initial;
   }
+  .level1-title {
+      margin: 0;
+      font-size: 3em;
+      box-sizing: border-box;
+      background-color: #053B06;
+      color: white;
+      padding: 15px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      animation-duration: 2s;
+      animation-iteration-count: initial;
+  }
+  .level2-title {
+    margin: 0;
+    font-size: 3em;
+    box-sizing: border-box;
+    background-color: #053B06;
+    color: white;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+}
+.level3-title {
+  margin: 0;
+  font-size: 3em;
+  box-sizing: border-box;
+  background-color: #053B06;
+  color: white;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
+}
   .container {
       padding: 0;
       display: flex;
-      border: 5px solid #ffcc5c;
+      border: 5px solid #5cff7f;
       /* flex-direction: column; */
   }
-
   @media all and (max-width: 750px) {
     .container {
       flex-wrap: wrap;
@@ -55,7 +93,6 @@ body {
   .winner {
       background-color: #88D498;
   }
-
   .gameboard {
     width: 600px;
     height: 420px;
@@ -64,30 +101,39 @@ body {
     position: relative;
     display: flex;
   }
-
   .snake {
     width: 30px;
     height: 30px;
     position: absolute;
-    /* background-image: url(https://www.scirra.com/arcade/images/8296/450/little-green-block.jpg); */
-    background: white;;
+    /* background: white;; */
+    background-image: url('https://img.pngio.com/png-tiger-face-transparent-tiger-facepng-images-pluspng-tiger-png-face-1260_1185.png');
+    background-size: contain;
     transition: 100ms;
+    overflow: hidden;
   }
-
+  .snake-tail {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url('https://img.pngio.com/png-tiger-face-transparent-tiger-facepng-images-pluspng-tiger-png-face-1260_1185.png');
+    background-size: contain;
+    transition: 100ms;
+    float: left;;
+  }
   .frog {
     width: 30px;
     height: 30px;
     position: absolute;
-    background: green;;
+    background-image: url('https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1019767171,width=178,height=178,version=1550477619/white-pixel-cat.png');
+    background-size: contain;
   }
   footer {
       position: relative;
       background-color: #C6DABF;
       color: white;
-      padding: 40px;
+      padding: 15px;
       text-align: center;
   }
-
   .homescreen {
       display: flex;
       flex-direction: column;
@@ -96,24 +142,64 @@ body {
       padding: 0 150px;
   }
   .start {
-    background-color: #0B5D1E;
+    background-color: darkgreen;
   }
   .welcome {
     display: flex;
     background-color: lightgreen;
-    padding: 30px;
-    /* margin: 100px; */
-    height: 200px;
+    padding: 10px;
+    height: 200x;
     align-items: center;
+    margin: 1em;
     font-family: 'Permanent Marker', cursive;
-    /* position: relative; */
   }
-
   .instructions {
       display: flex;
       background-color: white;
-      padding: 30px;
-      height: 120px;
-      /* margin: 100px; */
+      align-items: center;
+      padding: 10px;
+      height: 100px;
+      margin: 100px;
       font-family: 'Permanent Marker', cursive;
+  }
+  #score {
+    font-size: 2em;
+    color: black;
+  }
+  #clock {
+    font-size: 2em;
+    color: red;
+  }
+  #highscores1 {
+    font-size: 2em;
+    color: blue;
+  }
+  #bestscore1 {
+    font-size: 2em;
+    color: green;
+  }
+  #highscores2 {
+    font-size: 2em;
+    color: blue;
+  }
+  #bestscore2 {
+    font-size: 2em;
+    color: green;
+  }
+  #highscores3 {
+    font-size: 2em;
+    color: blue;
+  }
+  #bestscore3 {
+    font-size: 2em;
+    color: green;
+  }
+  .level2 {
+    background-color: #EEE82C;
+  }
+  .level3 {
+    background-color: #4C934C;
+  }
+  .level1 {
+    background-color: #91CB3E;
   }
