@@ -17,11 +17,10 @@ The landing page will consist of welcome message, instructions, links to levels,
 # WELCOME TO THE JUNGLE - LEVEL 1
 Player has 30 seconds to get the highest score. The game ends after 30 seconds or player touches any of the gameboard edges. 
 
-
-# WELCOME TO THE JUNGLE - LEVEL 1
+# WELCOME TO THE JUNGLE - LEVEL 2
 Player has 45 seconds to get the highest score. The game ends after 45 seconds or player touches any of the gameboard edges.
 
-# WELCOME TO THE JUNGLE - LEVEL 1
+# WELCOME TO THE JUNGLE - LEVEL 3
 Player has 60 seconds to get the highest score. The game ends after 60 seconds or player touches any of the gameboard edges.
 
 # Instructions 
@@ -35,3 +34,5 @@ Right Key: moves snake right
 
 # Link to game
 https://jhordanfigueroa.github.io/WELCOME-TO-JUNGLE/
+
+Link to video demonstration: https://drive.google.com/file/d/10nf0hNJibZuvIBdZ4Wuwr5lZiHHoC_D5/view?usp=sharing
